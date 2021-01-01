@@ -18,7 +18,7 @@ syn match cgoComment "#.*$" contains=cgoTodo
 
 
 " Syntax highlighting
-let b:current_syntax = "cgo"
+let b:current_syntax = "cgolinks"
 
 hi def link cgoTitle    htmlItalic
 hi def link cgoComment      Comment
