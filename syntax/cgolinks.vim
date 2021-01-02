@@ -11,8 +11,10 @@ endif
 " Matches
 syn match cgoURI '\(ftp\|http\|https\|mailto\|file\)\:\/\/.\+'
 syn match cgoSectionTitle '\n\=\[[^\]]\+\]'
-syn match cgoTitle '\n[^\[].\+' contains=cgoMark 
-syn match cgoMark '^\(\$ \)*' contained
+" syn match cgoTitle '\n[^\[].\+' contains=cgoMark 
+" syn match cgoMark '^\(\$ \)*' contained
+syn match cgoTitle '\n[^\[\$].\+'
+syn match cgoMark '^\n\$.\+'
 
 
 " Contained
