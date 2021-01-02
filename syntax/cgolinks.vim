@@ -11,7 +11,7 @@ endif
 " Matches
 syn match cgoURI '\(ftp\|http\|https\|mailto\|file\)\:\/\/.\+'
 syn match cgoSectionTitle '\n\=\[[^\]]\+\]'
-syn match cgoTitle '\n[^fhm\[].\+'
+syn match cgoTitle '\n.\+' " This works because it cames after cgoSectionTitle
 
 
 " Contained
