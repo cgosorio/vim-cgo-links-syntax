@@ -11,7 +11,8 @@ endif
 " Matches
 syn match cgoURI '\(ftp\|http\|https\|mailto\|file\)\:\/\/.\+'
 syn match cgoSectionTitle '\n\=\[[^\]]\+\]'
-syn match cgoTitle '\n.\+' " This works because it cames after cgoSectionTitle
+syn match cgoTitle '\n[^\[].\+' contains=cgoMark 
+syn match cgoMark '^\(\$ \)*' contained
 
 
 " Contained
@@ -22,8 +23,9 @@ syn keyword cgoTodo contained TODO FIXME XXX NOTE
 " Syntax highlighting
 let b:current_syntax = "cgolinks"
 
-hi def link cgoTitle        htmlItalic
+hi def link cgoTitle        cgoTitleColor
+hi def link cgoMark         cgoMarkColor
 hi def link cgoComment      Comment
-hi def link cgoSectionTitle htmlBold
-hi def link cgoURI          Identifier
+hi def link cgoSectionTitle cgoSectionTitleColor
+hi def link cgoURI          cgoURIColor
 hi def link cgoTodo         CursorLineNr
